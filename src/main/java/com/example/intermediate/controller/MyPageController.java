@@ -19,6 +19,8 @@ public class MyPageController {
 
     @RequestMapping(value="/api/auth/mypage", method = RequestMethod.GET)
     public ResponseDto<?> getMyPage(HttpServletRequest request) {
-        return myPageService.getMyPage(request);
+        return
+                myPageService.getMyPage(request);
     }
+
 }

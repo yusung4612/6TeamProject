@@ -30,6 +30,8 @@ public class PostHeartService {
 
     @Transactional
     public <PostResponseDto> ResponseDto<?> createPostHeart(HeartRequestDto requestDto, HttpServletRequest request) {
+
+        //TODO : 로그인하지 않은 경우의 예외 HttpServletRequest / request의 header에 Refresh-Token , Authorization 값을 할당해서 주시는지 확인해주세요
         if (null == request.getHeader("Refresh-Token")) {
             return ResponseDto.fail("MEMBER_NOT_FOUND",
                     "로그인이 필요합니다.");

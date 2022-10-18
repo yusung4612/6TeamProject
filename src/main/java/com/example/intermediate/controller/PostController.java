@@ -17,6 +17,7 @@ public class PostController {
   private final PostService postService;
 
   @ApiImplicitParams({
+          // 스웨거에서 할당해야하는 값들을 알려주는 Description
           @ApiImplicitParam(
                   name = "Refresh-Token",
                   required = true,
